@@ -1,5 +1,7 @@
 import React from "react";
-import { Component } from "react";
+import PropTypes from "prop-types";
+
+const Component = React.Component;
 
 class Footer extends Component {
   render() {
@@ -8,11 +10,19 @@ class Footer extends Component {
       data,
     } = this.props;
 
-    if (data) {
-      var networks = this.props.data.social.map(function(network) {
-        return <li key={network.name}><a href={network.url}><i className={network.className}></i></a></li>;
-      });
+    if (!data) {
+      return (<p>No Data Found</p>);
     }
+
+    const { social } = data;
+
+    const networks = social.map((network) => (
+      <li key={network.name}>
+        <a href={network.url}>
+          <i className={network.className}></i>
+        </a>
+      </li>
+    ));
 
     return (
       <footer>
@@ -35,5 +45,9 @@ class Footer extends Component {
     );
   }
 }
+
+Footer.propTypes = {
+  data: PropTypes.any,
+};
 
 export default Footer;
