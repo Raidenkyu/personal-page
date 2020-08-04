@@ -5,14 +5,9 @@ const Component = React.Component;
 
 class Footer extends Component {
   render() {
+    const { data } = this.props;
 
-    const {
-      data,
-    } = this.props;
-
-    if (!data) {
-      return (<p>No Data Found</p>);
-    }
+    if (!data) return (<p>No Data Found</p>);
 
     const { social } = data;
 
@@ -34,7 +29,7 @@ class Footer extends Component {
             </ul>
 
             <ul className="copyright">
-              <li>&copy; Copyright 2017 Tim Baker</li>
+              <li>&copy; Copyright 2020 João Maduro</li>
               <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
             </ul>
 

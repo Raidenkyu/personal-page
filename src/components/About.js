@@ -3,14 +3,9 @@ import PropTypes from "prop-types";
 
 class About extends Component {
   render() {
+    const { data } = this.props;
 
-    const {
-      data,
-    } = this.props;
-
-    if (!data) {
-      return (<p>No Data Found</p>);
-    }
+    if (!data) return (<p>No Data Found</p>);
 
     const {
       name,
@@ -35,7 +30,7 @@ class About extends Component {
       <section id="about">
         <div className="row">
           <div className="three columns">
-            <img className="profile-pic" src={profilepic} alt="Tim Baker Profile Pic" />
+            <img className="profile-pic" src={profilepic} alt="João Maduro Profile Pic" />
           </div>
           <div className="nine columns main-col">
             <h2>About Me</h2>

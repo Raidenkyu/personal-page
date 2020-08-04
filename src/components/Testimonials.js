@@ -1,18 +1,20 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 class Testimonials extends Component {
   render() {
+    const { data } = this.props;
 
-    if (this.props.data) {
-      var testimonials = this.props.data.testimonials.map(function(testimonials) {
-        return  <li key={testimonials.user}>
-          <blockquote>
-            <p>{testimonials.text}</p>
-            <cite>{testimonials.user}</cite>
-          </blockquote>
-        </li>;
-      });
-    }
+    if (!data) return (<p>No Data Found</p>);
+
+    const testimonials = data.testimonials.map((testimonials) => (
+      <li key={testimonials.user}>
+        <blockquote>
+          <p>{testimonials.text}</p>
+          <cite>{testimonials.user}</cite>
+        </blockquote>
+      </li>
+    ));
 
     return (
       <section id="testimonials">
@@ -34,5 +36,9 @@ class Testimonials extends Component {
     );
   }
 }
+
+Testimonials.propTypes = {
+  data: PropTypes.any,
+};
 
 export default Testimonials;
