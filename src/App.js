@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import ReactGA from 'react-ga';
-import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import About from './components/About';
-import Resume from './components/Resume';
-import Testimonials from './components/Testimonials';
-import Portfolio from './components/Portfolio';
+import React, { Component } from "react";
+import ReactGA from "react-ga";
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import About from "./components/About";
+import Resume from "./components/Resume";
+import Testimonials from "./components/Testimonials";
+import Portfolio from "./components/Portfolio";
 
 import resumeData from "./assets/data/resumeData.json";
 
@@ -15,11 +15,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      foo: 'bar',
-      resumeData: {}
+      foo: "bar",
+      resumeData: {},
     };
 
-    ReactGA.initialize('UA-110570651-1');
+    ReactGA.initialize("UA-110570651-1");
     ReactGA.pageview(window.location.pathname);
 
   }
