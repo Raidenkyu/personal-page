@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-class Testimonials extends Component {
+class Blog extends Component {
   render() {
     const { data } = this.props;
 
@@ -17,7 +17,7 @@ class Testimonials extends Component {
     ));
 
     return (
-      <section id="testimonials">
+      <section id="blog">
         <div className="text-container">
           <div className="row">
 
@@ -37,8 +37,8 @@ class Testimonials extends Component {
   }
 }
 
-Testimonials.propTypes = {
+Blog.propTypes = {
   data: PropTypes.any,
 };
 
-export default Testimonials;
+export default Blog;
