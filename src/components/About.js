@@ -20,7 +20,6 @@ class About extends Component {
     const {
       street,
       city,
-      state,
       zip,
     } = address;
 
@@ -42,7 +41,7 @@ class About extends Component {
                 <p className="address">
                   <span>{name}</span><br />
                   <span>{street}<br />
-                    {city} {state}, {zip}
+                    {city}, {zip}
                   </span><br />
                   <span>{phone}</span><br />
                   <span>{email}</span>
