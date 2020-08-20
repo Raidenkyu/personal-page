@@ -7,11 +7,11 @@ class Blog extends Component {
 
     if (!data) return (<p>No Data Found</p>);
 
-    const testimonials = data.testimonials.map((testimonials) => (
+    const posts = data.posts.map((testimonials) => (
       <li key={testimonials.user}>
         <blockquote>
-          <p>{testimonials.text}</p>
-          <cite>{testimonials.user}</cite>
+          <p>{testimonials.title}</p>
+          <cite>published at {testimonials.date}</cite>
         </blockquote>
       </li>
     ));
@@ -25,9 +25,13 @@ class Blog extends Component {
               <h1><span>Client Testimonials</span></h1>
             </div>
 
+            <div>
+              <h1>Check out my last blog post:</h1>
+            </div>
+
             <div className="ten columns flex-container">
               <ul className="slides">
-                {testimonials}
+                {posts}
               </ul>
             </div>
           </div>
