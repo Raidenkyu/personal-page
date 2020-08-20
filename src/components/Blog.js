@@ -7,11 +7,11 @@ class Blog extends Component {
 
     if (!data) return (<p>No Data Found</p>);
 
-    const posts = data.posts.map((testimonials) => (
-      <li key={testimonials.user}>
+    const posts = data.posts.map((posts) => (
+      <li key={posts.title}>
         <blockquote>
-          <p>{testimonials.title}</p>
-          <cite>published at {testimonials.date}</cite>
+          <p>{posts.title}</p>
+          <cite>published at {posts.date}</cite>
         </blockquote>
       </li>
     ));
@@ -22,7 +22,7 @@ class Blog extends Component {
           <div className="row">
 
             <div className="two columns header-col">
-              <h1><span>Client Testimonials</span></h1>
+              <h1><span>Blog Posts</span></h1>
             </div>
 
             <div>
