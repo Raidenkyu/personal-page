@@ -18,7 +18,6 @@ class About extends Component {
     } = data;
 
     const {
-      street,
       city,
       country,
     } = address;
@@ -40,7 +39,7 @@ class About extends Component {
                 <h2>Contact Details</h2>
                 <p className="address">
                   <span>{name}</span><br />
-                  <span>{street}<br />
+                  <span>
                     {city}, {country}
                   </span><br />
                   <span>{phone}</span><br />
