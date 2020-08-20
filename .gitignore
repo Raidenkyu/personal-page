@@ -65,3 +65,6 @@ typings/
 
 # misc
 .DS_Store
+
+# netlify deployment files
+.netlify
