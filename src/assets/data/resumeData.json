@@ -11,7 +11,7 @@
     "address": {
       "street": "Rua Professor Ricardo Alves",
       "city": "Porto",
-      "zip": "[Insert Postal Code]"
+      "country": "Portugal"
     },
     "website": "http://www.timbakerdev.com",
     "resumedownload": "http://timbakerdev.com",

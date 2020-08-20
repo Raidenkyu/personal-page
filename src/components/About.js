@@ -20,7 +20,7 @@ class About extends Component {
     const {
       street,
       city,
-      zip,
+      country,
     } = address;
 
     const profilepic = `images/${image}`;
@@ -41,7 +41,7 @@ class About extends Component {
                 <p className="address">
                   <span>{name}</span><br />
                   <span>{street}<br />
-                    {city}, {zip}
+                    {city}, {country}
                   </span><br />
                   <span>{phone}</span><br />
                   <span>{email}</span>
