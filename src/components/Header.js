@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactFitText from "react-fittext";
+import { Waypoint } from "react-waypoint";
+import { onEnterHandler } from "../utils/waypointHandler";
 
 class Header extends Component {
   render() {
@@ -40,16 +42,18 @@ class Header extends Component {
         </nav>
 
         <div className="row banner">
-          <div className="banner-text">
-            <ReactFitText compressor={1.0} minFontSize={40} maxFontSize={90}>
-              <h1 className="responsive-headline">I&#39;m {name}.</h1>
-            </ReactFitText>
-            <h3>I&#39;m a {city} based <span>{occupation}</span>. {description}.</h3>
-            <hr />
-            <ul className="social">
-              {networks}
-            </ul>
-          </div>
+          <Waypoint onEnter={onEnterHandler} topOffset="35%">
+            <div className="banner-text">
+              <ReactFitText compressor={1.0} minFontSize={40} maxFontSize={90}>
+                <h1 className="responsive-headline">I&#39;m {name}.</h1>
+              </ReactFitText>
+              <h3>I&#39;m a {city} based <span>{occupation}</span>. {description}.</h3>
+              <hr />
+              <ul className="social">
+                {networks}
+              </ul>
+            </div>
+          </Waypoint>
         </div>
 
         <p className="scrolldown">

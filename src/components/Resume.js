@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Waypoint } from "react-waypoint";
+import { onEnterHandler } from "../utils/waypointHandler";
 
 class Resume extends Component {
   render() {
@@ -34,52 +36,55 @@ class Resume extends Component {
     });
 
     return (
-      <section id="resume">
+      <Waypoint onEnter={onEnterHandler} topOffset="35%">
+        <section id="resume">
 
-        <div className="row education">
-          <div className="three columns header-col">
-            <h1><span>Education</span></h1>
-          </div>
+          <div className="row education">
+            <div className="three columns header-col">
+              <h1><span>Education</span></h1>
+            </div>
 
-          <div className="nine columns main-col">
-            <div className="row item">
-              <div className="twelve columns">
-                {educationList}
+            <div className="nine columns main-col">
+              <div className="row item">
+                <div className="twelve columns">
+                  {educationList}
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="row work">
+          <div className="row work">
 
-          <div className="three columns header-col">
-            <h1><span>Work</span></h1>
-          </div>
+            <div className="three columns header-col">
+              <h1><span>Work</span></h1>
+            </div>
 
-          <div className="nine columns main-col">
-            {workList}
-          </div>
-        </div>
-
-        <div className="row skill">
-
-          <div className="three columns header-col">
-            <h1><span>Skills</span></h1>
-          </div>
-
-          <div className="nine columns main-col">
-
-            <p>{skillmessage}
-            </p>
-
-            <div className="bars">
-              <ul className="skills">
-                {skillsList}
-              </ul>
+            <div className="nine columns main-col">
+              {workList}
             </div>
           </div>
-        </div>
-      </section>
+
+          <div className="row skill">
+
+            <div className="three columns header-col">
+              <h1><span>Skills</span></h1>
+            </div>
+
+            <div className="nine columns main-col">
+
+              <p>{skillmessage}
+              </p>
+
+              <div className="bars">
+                <ul className="skills">
+                  {skillsList}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </Waypoint>
     );
   }
 }

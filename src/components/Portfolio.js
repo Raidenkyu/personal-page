@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { Waypoint } from "react-waypoint";
+import { onEnterHandler } from "../utils/waypointHandler";
 
 class Portfolio extends Component {
   render() {
@@ -27,18 +29,19 @@ class Portfolio extends Component {
 
     return (
       <section id="portfolio">
+        <Waypoint onEnter={onEnterHandler} topOffset="35%">
+          <div className="row">
 
-        <div className="row">
+            <div className="twelve columns collapsed">
 
-          <div className="twelve columns collapsed">
+              <h1>Check Out Some of My Works.</h1>
 
-            <h1>Check Out Some of My Works.</h1>
-
-            <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
-              {projects}
+              <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
+                {projects}
+              </div>
             </div>
           </div>
-        </div>
+        </Waypoint>
       </section>
     );
   }
