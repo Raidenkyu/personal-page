@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Waypoint } from "react-waypoint";
-import { onEnterHandler } from "../utils/waypointHandler";
+import { waypoints, onEnterHandler } from "../utils/waypointHandler";
 
 class Blog extends Component {
   render() {
@@ -20,7 +20,7 @@ class Blog extends Component {
 
     return (
       <section id="blog">
-        <Waypoint onEnter={onEnterHandler} topOffset="35%">
+        <Waypoint onEnter={onEnterHandler.bind(undefined, waypoints[4])} topOffset="35%">
           <div className="text-container">
             <div className="row">
 

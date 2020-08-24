@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactFitText from "react-fittext";
 import { Waypoint } from "react-waypoint";
-import { onEnterHandler } from "../utils/waypointHandler";
+import { waypoints, onEnterHandler } from "../utils/waypointHandler";
 
 class Header extends Component {
   render() {
@@ -42,7 +42,7 @@ class Header extends Component {
         </nav>
 
         <div className="row banner">
-          <Waypoint onEnter={onEnterHandler} topOffset="35%">
+          <Waypoint onEnter={onEnterHandler.bind(undefined, waypoints[0])} topOffset="35%">
             <div className="banner-text">
               <ReactFitText compressor={1.0} minFontSize={40} maxFontSize={90}>
                 <h1 className="responsive-headline">I&#39;m {name}.</h1>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Waypoint } from "react-waypoint";
-import { onEnterHandler } from "../utils/waypointHandler";
+import { waypoints, onEnterHandler } from "../utils/waypointHandler";
 
 class Portfolio extends Component {
   render() {
@@ -29,7 +29,7 @@ class Portfolio extends Component {
 
     return (
       <section id="portfolio">
-        <Waypoint onEnter={onEnterHandler} topOffset="35%">
+        <Waypoint onEnter={onEnterHandler.bind(undefined, waypoints[3])} topOffset="35%">
           <div className="row">
 
             <div className="twelve columns collapsed">

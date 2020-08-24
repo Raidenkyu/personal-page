@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Waypoint } from "react-waypoint";
-import { onEnterHandler } from "../utils/waypointHandler";
+import { waypoints, onEnterHandler } from "../utils/waypointHandler";
 
 class About extends Component {
   render() {
@@ -28,7 +28,7 @@ class About extends Component {
 
     return (
       <section id="about">
-        <Waypoint onEnter={onEnterHandler} topOffset="35%">
+        <Waypoint onEnter={onEnterHandler.bind(undefined, waypoints[1])} topOffset="35%">
           <div className="row">
             <div className="three columns">
               <img className="profile-pic" src={profilepic} alt="João Maduro Profile Pic" />

@@ -1,25 +1,19 @@
-const waypoints = ["home", "about", "resume", "portfolio", "blog"];
-let currentWaypointIndex = 0;
+let currentSection = "home";
 
-const getSectionElement = (section) => (
-  document.querySelector(`#nav-wrap a[href="#${section}"]`)
+const getSectionElement = (navbar, section) => (
+  navbar.querySelector(`a[href="#${section}"]`).parentElement
 );
 
-export const onEnterHandler = ({ previousPosition }) => {
-  const previousSection = waypoints[currentWaypointIndex];
+export const waypoints = ["home", "about", "resume", "portfolio", "blog"];
 
-  if (previousPosition === "below") {
-    currentWaypointIndex++;
-  } else if (currentWaypointIndex > 0) {
-    currentWaypointIndex--;
-  }
+export const onEnterHandler = (newSection) => {
+  const previousSection = currentSection;
+  currentSection = newSection;
 
-  const currentSection = waypoints[currentWaypointIndex];
+  const navbar = document.querySelector("ul#nav");
 
-  const previousSectionElement = getSectionElement(previousSection);
-  const currentSectionElement = getSectionElement(currentSection);
-
-  console.log(currentSectionElement);
+  const previousSectionElement = getSectionElement(navbar, previousSection);
+  const currentSectionElement = getSectionElement(navbar, currentSection);
 
   if (previousSectionElement) previousSectionElement.classList.remove("current");
   if (currentSectionElement) currentSectionElement.classList.add("current");
