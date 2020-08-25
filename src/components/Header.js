@@ -59,7 +59,7 @@ class Header extends Component {
         </div>
 
         <p className="scrolldown">
-          <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
+          <Link href="#about" activeClass="active" to="about" spy={true} smooth={true} duration={800}><i className="icon-down-circle"></i></Link>
         </p>
 
       </header>

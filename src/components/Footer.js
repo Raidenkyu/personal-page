@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import { Link } from "react-scroll";
+
 const Component = React.Component;
 
 class Footer extends Component {
@@ -34,7 +36,7 @@ class Footer extends Component {
             </ul>
 
           </div>
-          <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open"></i></a></div>
+          <div id="go-top"><Link href="#about" activeClass="active" to="about" spy={true} smooth={true} duration={800}><i className="icon-up-open"></i></Link></div>
         </div>
       </footer>
     );
