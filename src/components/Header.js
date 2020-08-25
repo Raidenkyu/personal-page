@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ReactFitText from "react-fittext";
 import { Waypoint } from "react-waypoint";
+import { Link } from "react-scroll";
+
 import { waypoints, onEnterHandler } from "../utils/waypointHandler";
 
 class Header extends Component {
@@ -32,11 +34,11 @@ class Header extends Component {
           <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
 
           <ul id="nav" className="nav">
-            <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-            <li><a className="smoothscroll" href="#about">About</a></li>
-            <li><a className="smoothscroll" href="#resume">Resume</a></li>
-            <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-            <li><a className="smoothscroll" href="#blog">Blog</a></li>
+            <li><Link href="#home" activeClass="active" to="home" spy={true} smooth={true} duration={800}>Home</Link></li>
+            <li><Link href="#about" activeClass="active" to="about" spy={true} smooth={true} duration={800}>About</Link></li>
+            <li><Link href="#resume" activeClass="active" to="resume" spy={true} smooth={true} duration={800}>Resume</Link></li>
+            <li><Link href="#portfolio" activeClass="active" to="portfolio" spy={true} smooth={true} duration={800}>Portfolio</Link></li>
+            <li><Link href="#blog" activeClass="active" to="blog" spy={true} smooth={true} duration={800}>Blog</Link></li>
           </ul>
 
         </nav>
