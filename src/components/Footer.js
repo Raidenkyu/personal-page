@@ -36,7 +36,9 @@ class Footer extends Component {
             </ul>
 
           </div>
-          <div id="go-top"><Link href="#about" activeClass="active" to="about" spy={true} smooth={true} duration={800}><i className="icon-up-open"></i></Link></div>
+          <div id="go-top"><Link href="#about" activeClass="active" to="about" spy={true} smooth={true} duration={800}>
+            <i className="icon-up-open"></i>
+          </Link></div>
         </div>
       </footer>
     );
