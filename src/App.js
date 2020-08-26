@@ -17,22 +17,34 @@ class App extends Component {
     this.state = {
       foo: "bar",
       resumeData: {},
+      width: window.innerWidth,
+      height: window.innerHeight,
     };
 
     ReactGA.initialize("UA-110570651-1");
     ReactGA.pageview(window.location.pathname);
-
   }
 
   getResumeData() {
     this.setState({ resumeData: resumeData });
   }
 
+  resizeHandler() {
+    this.setState({ width: window.innerWidth, height: window.innerHeight });
+  }
+
   componentDidMount() {
+
     this.getResumeData();
+    window.addEventListener("resize", this.resizeHandler.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.resizeHandler.bind(this));
   }
 
   render() {
+    console.log(this.state.width);
     return (
       <div className="App">
         <Header data={this.state.resumeData.main} />
