@@ -7,8 +7,29 @@ import { Link } from "react-scroll";
 import { waypoints, onEnterHandler } from "../utils/waypointHandler";
 
 class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      height: window.innerHeight,
+    };
+  }
+
+  resizeHandler() {
+    this.setState({ height: window.innerHeight });
+  }
+
+  componentDidMount() {
+    window.addEventListener("resize", this.resizeHandler.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.resizeHandler.bind(this));
+  }
+
   render() {
-    const { data, height } = this.props;
+    const { data } = this.props;
+    const { height } = this.state;
 
     if (!data) return (<p>No Data Found</p>);
 
@@ -72,7 +93,6 @@ class Header extends Component {
 Header.propTypes = {
   data: PropTypes.any,
   width: PropTypes.number,
-  height: PropTypes.number,
 };
 
 export default Header;

@@ -17,7 +17,6 @@ class App extends Component {
     this.state = {
       foo: "bar",
       resumeData: {},
-      height: window.innerHeight,
     };
 
     ReactGA.initialize("UA-110570651-1");
@@ -28,24 +27,14 @@ class App extends Component {
     this.setState({ resumeData: resumeData });
   }
 
-  resizeHandler() {
-    this.setState({ height: window.innerHeight });
-  }
-
   componentDidMount() {
-
     this.getResumeData();
-    window.addEventListener("resize", this.resizeHandler.bind(this));
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.resizeHandler.bind(this));
   }
 
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main} height={this.state.height} />
+        <Header data={this.state.resumeData.main} />
         <About data={this.state.resumeData.main} />
         <Resume data={this.state.resumeData.resume} />
         <Portfolio data={this.state.resumeData.portfolio} />
