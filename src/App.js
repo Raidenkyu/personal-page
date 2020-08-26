@@ -44,10 +44,9 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.width);
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main} />
+        <Header data={this.state.resumeData.main} width={this.state.width} height={this.state.height} />
         <About data={this.state.resumeData.main} />
         <Resume data={this.state.resumeData.resume} />
         <Portfolio data={this.state.resumeData.portfolio} />

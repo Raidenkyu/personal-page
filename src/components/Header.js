@@ -8,7 +8,7 @@ import { waypoints, onEnterHandler } from "../utils/waypointHandler";
 
 class Header extends Component {
   render() {
-    const { data } = this.props;
+    const { data, width, height } = this.props;
 
     if (!data) return (<p>No Data Found</p>);
 
@@ -26,7 +26,7 @@ class Header extends Component {
     ));
 
     return (
-      <header id="home">
+      <header id="home" style={{ width: width, height: height }}>
 
         <nav id="nav-wrap">
 
@@ -71,6 +71,8 @@ class Header extends Component {
 
 Header.propTypes = {
   data: PropTypes.any,
+  width: PropTypes.number,
+  height: PropTypes.number,
 };
 
 export default Header;
