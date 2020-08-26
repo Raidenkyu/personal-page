@@ -17,7 +17,6 @@ class App extends Component {
     this.state = {
       foo: "bar",
       resumeData: {},
-      width: window.innerWidth,
       height: window.innerHeight,
     };
 
@@ -30,7 +29,7 @@ class App extends Component {
   }
 
   resizeHandler() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
+    this.setState({ height: window.innerHeight });
   }
 
   componentDidMount() {
@@ -46,7 +45,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeData.main} width={this.state.width} height={this.state.height} />
+        <Header data={this.state.resumeData.main} height={this.state.height} />
         <About data={this.state.resumeData.main} />
         <Resume data={this.state.resumeData.resume} />
         <Portfolio data={this.state.resumeData.portfolio} />
