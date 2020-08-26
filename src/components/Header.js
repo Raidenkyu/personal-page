@@ -6,12 +6,16 @@ import { Link } from "react-scroll";
 
 import { waypoints, onEnterHandler } from "../utils/waypointHandler";
 
+import EffectsStyle from "../styles/effects/Effects.module.css";
+
 class Header extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       height: window.innerHeight,
+      fadeOut: false,
+      opaque: false,
     };
   }
 
@@ -19,17 +23,34 @@ class Header extends Component {
     this.setState({ height: window.innerHeight });
   }
 
+  scrollHandler() {
+    const { height } = this.state;
+    const scrollY = window.scrollY;
+
+    if ((scrollY > height * .20) && (scrollY < height) && (window.outerWidth > 768)) {
+      this.setState({ fadeOut: true });
+    } else {
+      if (scrollY < height * .20) {
+        this.setState({ fadeOut: false, opaque: false });
+      } else {
+        this.setState({ fadeOut: false, opaque: true });
+      }
+    }
+  }
+
   componentDidMount() {
     window.addEventListener("resize", this.resizeHandler.bind(this));
+    window.addEventListener("scroll", this.scrollHandler.bind(this));
   }
 
   componentWillUnmount() {
     window.removeEventListener("resize", this.resizeHandler.bind(this));
+    window.removeEventListener("scroll", this.scrollHandler.bind(this));
   }
 
   render() {
     const { data } = this.props;
-    const { height } = this.state;
+    const { height, fadeOut, opaque } = this.state;
 
     if (!data) return (<p>No Data Found</p>);
 
@@ -49,7 +70,7 @@ class Header extends Component {
     return (
       <header id="home" style={{ height: height }}>
 
-        <nav id="nav-wrap">
+        <nav id="nav-wrap" className={`${opaque ? "opaque" : ""} ${fadeOut ? EffectsStyle.fadeOut : EffectsStyle.fadeIn}`}>
 
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
           <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
