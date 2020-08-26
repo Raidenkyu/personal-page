@@ -10,7 +10,7 @@ class Portfolio extends Component {
     if (!data) return (<p>No Data Found</p>);
 
     const projects = data.projects.map((projects) => {
-      const projectImage = `images/portfolio/${projects.image}`;
+      const projectImage = require(`../assets/images/portfolio/${projects.image}`);
       return <div key={projects.title} className="columns portfolio-item">
         <div className="item-wrap">
           <a href={projects.url} title={projects.title}>

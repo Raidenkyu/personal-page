@@ -24,7 +24,7 @@ class About extends Component {
       country,
     } = address;
 
-    const profilepic = `images/${image}`;
+    const profilepic = require(`../assets/images/${image}`);
 
     return (
       <section id="about">
