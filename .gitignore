@@ -42,6 +42,7 @@ dist/
 # Build directories
 build/
 public/
+.cache/
 
 # Typescript v1 declaration files
 typings/
