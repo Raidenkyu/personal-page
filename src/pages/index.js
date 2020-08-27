@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 
-import "../styles/App.css";
+import "../styles/index.css";
 import LoadingSpinnerStyle from "../styles/LoadingSpinner.module.css";
 
 import Header from "../components/Header";
