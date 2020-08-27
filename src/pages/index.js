@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import ReactGA from "react-ga";
-import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import About from "./components/About";
-import Resume from "./components/Resume";
-import Blog from "./components/Blog";
-import Portfolio from "./components/Portfolio";
+import "../styles/App.css";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import About from "../components/About";
+import Resume from "../components/Resume";
+import Blog from "../components/Blog";
+import Portfolio from "../components/Portfolio";
 
-import resumeData from "./assets/data/resumeData.json";
+import resumeData from "../assets/data/resumeData.json";
 
 class App extends Component {
 
