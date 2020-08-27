@@ -41,6 +41,7 @@ dist/
 
 # Build directories
 build/
+public/
 
 # Typescript v1 declaration files
 typings/
