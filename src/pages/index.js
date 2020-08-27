@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactGA from "react-ga";
 import "../styles/App.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -8,6 +7,8 @@ import Resume from "../components/Resume";
 import Blog from "../components/Blog";
 import Portfolio from "../components/Portfolio";
 
+import loadingSpinner from "../assets/images/loader.gif";
+
 import resumeData from "../assets/data/resumeData.json";
 
 class App extends Component {
@@ -15,12 +16,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      foo: "bar",
       resumeData: {},
     };
-
-    ReactGA.initialize("UA-110570651-1");
-    ReactGA.pageview(window.location.pathname);
   }
 
   getResumeData() {
@@ -32,6 +29,8 @@ class App extends Component {
   }
 
   render() {
+    if (Object.entries(this.state.resumeData).length === 0) return (<img src={loadingSpinner} alt="loading" />);
+
     return (
       <div className="App">
         <Header data={this.state.resumeData.main} />

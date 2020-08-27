@@ -13,7 +13,7 @@ class Header extends Component {
     super(props);
 
     this.state = {
-      height: window.innerHeight,
+      height: (typeof window !== "undefined") ? window.innerHeight : 0,
       fadeOut: false,
       opaque: false,
     };

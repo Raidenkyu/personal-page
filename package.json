@@ -1,27 +1,25 @@
 {
   "name": "joaoccm.me",
-  "version": "0.1.0",
+  "version": "0.8.0",
   "private": true,
   "dependencies": {
     "gatsby": "^2.24.51",
-    "jquery": "^3.2.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-fittext": "^1.0.0",
-    "react-ga": "^2.3.5",
     "react-scripts": "^3.4.3",
     "react-scroll": "^1.8.1",
     "react-waypoint": "^9.0.3",
     "webpack": "^4.42.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "gatsby develop",
+    "build": "gatsby build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint ./src/**/*.js",
     "lint-fix": "eslint --fix ./src/**/*.js",
-    "prod": "serve -s build"
+    "serve": "gatsby serve"
   },
   "eslintConfig": {
     "extends": "react-app"
