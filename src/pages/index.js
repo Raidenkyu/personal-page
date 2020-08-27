@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 
 import "../styles/App.css";
-import LoadingSpinnerStyles from "../styles/LoadingSpinner.module.css";
+import LoadingSpinnerStyle from "../styles/LoadingSpinner.module.css";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -35,8 +35,8 @@ class App extends Component {
 
   render() {
     if (Object.entries(this.state.resumeData).length === 0) return (
-      <div className={LoadingSpinnerStyles.imgContainer}>
-        <img src={loadingSpinner} className={LoadingSpinnerStyles.imgMiddle} alt="loading" />
+      <div className={LoadingSpinnerStyle.loadingSpinnerContainer}>
+        <img src={loadingSpinner} alt="loading" />
       </div>
     );
 

@@ -73,7 +73,7 @@ class Header extends Component {
         <nav id="nav-wrap" className={`${opaque ? "opaque" : ""} ${fadeOut ? EffectsStyle.fadeOut : EffectsStyle.fadeIn}`}>
 
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-          <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
+          <a className="mobile-btn" href="#nav-wrap" title="Hide navigation">Hide navigation</a>
 
           <ul id="nav" className="nav">
             <li><Link href="#home" activeClass="active" to="home" spy={true} smooth={true} duration={800}>Home</Link></li>
