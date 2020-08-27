@@ -1,0 +1,11 @@
+.imgContainer {
+  display: table;
+  height: 100%;
+  width: 100%;  
+}
+  
+.imgMiddle {  
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;  
+}

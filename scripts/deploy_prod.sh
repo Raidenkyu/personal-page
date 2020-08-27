@@ -1,3 +1,3 @@
 #!/bin/bash
 
-netlify deploy --dir=./build --prod
+netlify deploy --dir=./public --prod
