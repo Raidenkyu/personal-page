@@ -27,7 +27,7 @@ const Layout = ({ location, title, children }) => {
           {title}
         </Link>
       </h1>
-    )
+    );
   } else {
     header = (
       <h3
@@ -46,7 +46,7 @@ const Layout = ({ location, title, children }) => {
           {title}
         </Link>
       </h3>
-    )
+    );
   }
   return (
     <div
