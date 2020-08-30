@@ -30,7 +30,7 @@ Now entering in some techinal aspects, some of the plans to Serpent OS, include:
 * Wayland-only. X11 compatibility via containers will be investigated
 * Fully stateless with management tools and upstreaming of patches.
 
-There also many more aspects that the Serpent OS team will reveal eventually, and you can follow their progress in [www.serpentos.com/](https://www.serpentos.com/).
+There also many more aspects that the Serpent OS team will reveal eventually, and you can follow their progress in [www.serpentos.com](https://www.serpentos.com/).
 
 ## Conclusion
 
