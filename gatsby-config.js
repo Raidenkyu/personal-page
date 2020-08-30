@@ -3,7 +3,7 @@ module.exports = {
     title: "João Maduro Development",
     author: {
       name: "João Maduro",
-      summary: "Porto based Computer Science Student.",
+      summary: " a Porto based Computer Science Student.",
     },
     description: "A Presentation website showing my skills and portfolio",
     siteUrl: "https://joaoccm.me/",
@@ -39,6 +39,7 @@ module.exports = {
               wrapperStyle: "margin-bottom: 1.0725rem",
             },
           },
+          "gatsby-plugin-sass",
           "gatsby-remark-prismjs",
           "gatsby-remark-copy-linked-files",
           "gatsby-remark-smartypants",

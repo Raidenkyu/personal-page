@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
+import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+
+import "../styles/home/index.css";
+import "../styles/home/default.scss";
+import "../styles/home/layout.scss";
 
 import LoadingSpinnerStyle from "../styles/home/LoadingSpinner.module.css";
 
@@ -38,7 +44,9 @@ class App extends Component {
         <img src={loadingSpinner} alt="loading" />
       </div>
     );
-    require("../styles/home/index.css");
+
+    const lattestPost = this.props.data.allMarkdownRemark.edges[0].node;
+
     return (
       <div className="App">
         <Helmet>
@@ -47,17 +55,45 @@ class App extends Component {
           <meta name="theme-color" content="#000000" />
           <link rel="shortcut icon" href={favicon} />
           <title>João Maduro Development</title>
+          <html className="index" lang="en" />
         </Helmet>
 
         <Header data={this.state.resumeData.main} />
         <About data={this.state.resumeData.main} />
         <Resume data={this.state.resumeData.resume} />
         <Portfolio data={this.state.resumeData.portfolio} />
-        <Blog data={this.state.resumeData.blog} />
+        <Blog data={lattestPost} />
         <Footer data={this.state.resumeData.main} />
       </div>
     );
   }
 }
 
+App.propTypes = {
+  data: PropTypes.any,
+};
+
 export default App;
+
+export const pageQuery = graphql`
+  query {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 1
+      ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+          }
+        }
+      }
+    }
+  }
+`;

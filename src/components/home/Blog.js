@@ -9,14 +9,14 @@ class Blog extends Component {
 
     if (!data) return (<p>No Data Found</p>);
 
-    const posts = data.posts.map((posts) => (
-      <li key={posts.title}>
+    const posts = (
+      <li key={data.frontmatter.title}>
         <blockquote>
-          <p>{posts.title}</p>
-          <cite>published at {posts.date}</cite>
+          <a href={data.fields.slug}><p>{data.frontmatter.title}</p></a>
+          <cite>published at {data.frontmatter.date}</cite>
         </blockquote>
       </li>
-    ));
+    );
 
     return (
       <section id="blog">
@@ -36,6 +36,10 @@ class Blog extends Component {
                 <ul className="slides">
                   {posts}
                 </ul>
+              </div>
+
+              <div className="link-container">
+                <a href="/blog">Click here to see all posts in my blog</a>
               </div>
             </div>
           </div>
