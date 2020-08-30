@@ -4,10 +4,9 @@ import ReactFitText from "react-fittext";
 import { Waypoint } from "react-waypoint";
 import { Link } from "react-scroll";
 
-import { waypoints, onEnterHandler } from "../utils/waypointHandler";
+import { waypoints, onEnterHandler } from "../../utils/waypointHandler";
 
-import EffectsStyle from "../styles/effects/Effects.module.css";
-
+import EffectsStyle from "../../styles/effects/Effects.module.css";
 
 class Header extends Component {
   constructor(props) {

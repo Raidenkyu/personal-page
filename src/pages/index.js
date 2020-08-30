@@ -4,12 +4,12 @@ import { Helmet } from "react-helmet";
 import "../styles/index.css";
 import LoadingSpinnerStyle from "../styles/LoadingSpinner.module.css";
 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import About from "../components/About";
-import Resume from "../components/Resume";
-import Blog from "../components/Blog";
-import Portfolio from "../components/Portfolio";
+import Header from "../components/home/Header";
+import Footer from "../components/home/Footer";
+import About from "../components/home/About";
+import Resume from "../components/home/Resume";
+import Blog from "../components/home/Blog";
+import Portfolio from "../components/home/Portfolio";
 
 import loadingSpinner from "../assets/images/loader.gif";
 

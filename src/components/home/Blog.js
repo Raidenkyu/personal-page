@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Waypoint } from "react-waypoint";
-import { waypoints, onEnterHandler } from "../utils/waypointHandler";
+import { waypoints, onEnterHandler } from "../../utils/waypointHandler";
 
 class Blog extends Component {
   render() {

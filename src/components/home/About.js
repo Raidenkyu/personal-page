@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Waypoint } from "react-waypoint";
-import { waypoints, onEnterHandler } from "../utils/waypointHandler";
+import { waypoints, onEnterHandler } from "../../utils/waypointHandler";
 
 class About extends Component {
   render() {
@@ -24,7 +24,7 @@ class About extends Component {
       country,
     } = address;
 
-    const profilepic = require(`../assets/images/${image}`);
+    const profilepic = require(`../../assets/images/${image}`);
 
     return (
       <section id="about">
