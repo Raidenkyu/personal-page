@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Helmet } from "react-helmet";
 
-import "../styles/home/index.css";
 import LoadingSpinnerStyle from "../styles/home/LoadingSpinner.module.css";
 
 import Header from "../components/home/Header";
@@ -39,7 +38,7 @@ class App extends Component {
         <img src={loadingSpinner} alt="loading" />
       </div>
     );
-
+    require("../styles/home/index.css");
     return (
       <div className="App">
         <Helmet>
