@@ -38,7 +38,7 @@ class Blog extends Component {
                 </ul>
               </div>
 
-              <div className="link-container">
+              <div className="link-container ten columns flex-container">
                 <a href="/blog">Click here to see all posts in my blog</a>
               </div>
             </div>

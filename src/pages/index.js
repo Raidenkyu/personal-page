@@ -3,9 +3,9 @@ import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 
-import "../styles/home/index.css";
 import "../styles/home/default.scss";
 import "../styles/home/layout.scss";
+import "../styles/home/index.css";
 
 import LoadingSpinnerStyle from "../styles/home/LoadingSpinner.module.css";
 
