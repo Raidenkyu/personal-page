@@ -41,9 +41,6 @@ e. Others
    vertical-align: baseline;
    background: transparent;
 
-   font-size: 62.5%;
-   -webkit-font-smoothing: antialiased;
-
    body,
    div,
    span,
@@ -219,6 +216,9 @@ e. Others
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
    }
+
+   font-size: 62.5%;
+   -webkit-font-smoothing: antialiased;
 
    body {
       background: #fff;

@@ -5,7 +5,8 @@ import { graphql } from "gatsby";
 
 import "../styles/home/default.scss";
 import "../styles/home/layout.scss";
-import "../styles/home/index.css";
+import "../styles/home/fonts.css";
+import "../styles/home/media-queries.scss";
 
 import LoadingSpinnerStyle from "../styles/home/LoadingSpinner.module.css";
 
