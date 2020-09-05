@@ -1,7 +1,7 @@
 # joaoccm.me
 My own (João Maduro) personal website. This project was developed using *Gatsby* and at the moment it's hosted in the Netlify servers.
 
-Go check it out in [joaoccm.me](www.joaoccm.me).
+Go check it out in [joaoccm.me](https://www.joaoccm.me).
 
 ## Usage
 ### Setup project
